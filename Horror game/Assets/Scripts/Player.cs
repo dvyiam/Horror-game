@@ -17,6 +17,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 10f;
+        }
+        else
+        {
+            speed = 5f;
+        }
         movement();
         mouseMovementX();
     }
@@ -36,4 +44,9 @@ public class Player : MonoBehaviour
         newRotation.y += mousex;
         transform.localEulerAngles = newRotation;
     }
+
+   /* IEnumerator sprintMechanism()
+    {
+
+    }*/
 }
