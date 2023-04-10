@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField]CharacterController cc;
     [SerializeField]Camera cam;
+    public float senstivity = 5f;
     // Start is called before the first frame update
     void Start()
     {
