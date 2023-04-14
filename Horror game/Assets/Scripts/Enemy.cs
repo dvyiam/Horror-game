@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public int minDis = 4;
     public int maxDis = 1;
     NavMeshAgent agent;
-    [SerializeField]Animator animator;
+   // [SerializeField]Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.position) > minDis ) //not close enough
         {
-            animator.SetBool("is_idle", true);
+           // animator.SetBool("is_idle", true);
             agent.enabled = true;
             agent.SetDestination(player.position);
             
@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
         else
         {
             agent.enabled = false;
-            animator.SetBool("is_idle", false);
+            //animator.SetBool("is_idle", false);
         }
     }
 }
